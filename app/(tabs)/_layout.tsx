@@ -15,7 +15,7 @@ export default function TabLayout() {
         headerShown: false,
       }}>
       <Tabs.Screen
-        name="index"
+        name="home"
         options={{
           title: 'Home',
           tabBarIcon: ({ color, focused }) => (
@@ -24,11 +24,29 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="qr"
         options={{
-          title: 'Explore',
+          title: 'Scan QR',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <TabBarIcon name={focused ? 'qr-code' : 'qr-code-outline'} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="noti"
+        options={{
+          title: 'Notifications',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'notifications' : 'notifications-outline'} color={color} />
+          ),
+        }}
+      />
+       <Tabs.Screen
+        name="setting"
+        options={{
+          title: 'Settings',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'settings' : 'settings-outline'} color={color} />
           ),
         }}
       />
